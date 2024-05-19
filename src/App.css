@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Sampurasun';
+  src: url('/public/font/Sampurasun.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url('/public/font/Cormorant-Regular.ttf') format('truetype');
+}
+
+.App{
+  margin-top: 80px;
+}
