@@ -4,14 +4,14 @@ const TeamData = [
         title: 'Leader',
         description: 'Some text that describes me lorem ipsum ipsum lorem.',
         email: 'savero2605@gmail.com',
-        img: '/image/East Java/savero.jpg',
+        img: '/image/Member/savero.jpg',
     },
     {
         name: 'Muhammad Sagara Waluya',
         title: 'Member',
         description: 'A student at Multimedia Nusantara University, currently studying Computer science',
         email: 'sagarawaluya@gmail.com',
-        img: '/image/East Java/Sagara.jpg',
+        img: '/image/Member/sagara.jpeg',
     },
     {
         name: 'Alfa In Septian Fernatjanan',

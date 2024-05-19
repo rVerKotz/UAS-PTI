@@ -23,8 +23,8 @@ export default function NavBar() {
         <Link to="/about" className="NavItems">
           About
         </Link>
-        <Link to="/Contact" className="NavItems">
-          Contact
+        <Link to="/gallery" className="NavItems">
+          Gallery
         </Link>
       </div>
       <div className="burgerVisible">
@@ -39,8 +39,8 @@ export default function NavBar() {
           <Link to="/about" className="bm-item" onClick={closeMenu}>
             About
           </Link>
-          <Link to="/Contact" className="bm-item" onClick={closeMenu}>
-            Contact
+          <Link to="/gallery" className="bm-item" onClick={closeMenu}>
+            Gallery
           </Link>
         </Menu>
       </div>

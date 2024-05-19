@@ -1,0 +1,55 @@
+
+.member-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+  }
+
+  .member-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    color: #f9f9f9;
+  }
+  
+  .member-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .member-card-container {
+    padding: 15px;
+  }
+  
+  .member-card .member-title {
+    color: #777;
+    font-size: 18px;
+  }
+  
+  .member-button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
