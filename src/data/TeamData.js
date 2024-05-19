@@ -11,14 +11,14 @@ const TeamData = [
         title: 'Member',
         description: 'A student at Multimedia Nusantara University, currently studying Computer science',
         email: 'sagarawaluya@gmail.com',
-        img: '/image/Member/sagara.jpeg',
+        img: '/image/Member/Sagara.jpeg',
     },
     {
         name: 'Alfa In Septian Fernatjanan',
         title: 'Member',
         description: ' A student at Multimedia Nusantara University, Majoring in Informatics Engineering.',
         email: 'alfaifernatyanan@gmail.com',
-        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Robert_Downey%2C_Jr._2012.jpg/330px-Robert_Downey%2C_Jr._2012.jpg',
+        img: '/image/Member/Alfa.jpg',
     },
  ];
 

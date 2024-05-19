@@ -16,6 +16,10 @@ export default function NavBar() {
 
   return (
     <div className="NavBar">
+      <div className="LogoSection">
+        <img src="/logo.png" style={{width: "50px", height: "50px", padding:"0 10px"}}/>
+        <h1>East Java</h1>
+      </div>
       <div className="NavItems" style={{borderLeft: "1px solid black", lineHeight: "79px"}}>
         <Link to="/" className="NavItems">
           Home
