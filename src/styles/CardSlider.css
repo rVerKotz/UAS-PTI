@@ -29,7 +29,7 @@
     position: relative;
     overflow: hidden;
     width: 100vw;
-    background: linear-gradient(to right, #fffcf4, transparent);
+    background: linear-gradient(to right, #ffcdd2, transparent);
   }
   
   .fade {
@@ -37,10 +37,10 @@
     width: 100%;
     background: linear-gradient(
       90deg,
-      #fffcf4,
+      #ffcdd2,
       transparent 5%,
       transparent 90%,
-      #fffcf4
+      #ffcdd2
     );
     inset: 0;
     pointer-events: none;
@@ -56,10 +56,10 @@
     .fade {
       background: linear-gradient(
         180deg,
-        #fffcf4,
+        #ffcdd2,
         transparent 5%,
         transparent 90%,
-        #fffcf4
+        #ffcdd2
       );
     }
   }

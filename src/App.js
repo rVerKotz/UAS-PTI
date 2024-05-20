@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-
 import City from "./component/City";
 import Navbar from "./component/Navbar";
 import PopUp from "./component/popUp";
-import Home from "./component/Home";
-import Contact from "./component/Contact";
-import About from "./component/About";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 import image from "./data/EastJavaCard";
 import "./App.css";
 
