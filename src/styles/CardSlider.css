@@ -1,65 +1,82 @@
 .card-y-slider {
-    display: flex;
-    overflow: visible;
-    width: 100vw;
+  display: flex;
+  overflow: visible;
+  width: 100vw;
+}
+
+.read-more {
+  text-decoration: underline;
+  color: blue;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.box {
+  display: flex; /* Make .box a flex container */
+  flex-direction: column; /* Arrange children in a column */
+  justify-content: flex-start; /* Start items from the top */
+  flex-shrink: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  white-space: normal;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.75);
+  transition: scale 300ms ease-in-out;
+}
+
+.box:hover {
+  z-index: 20;
+  scale: 1.04;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  margin-top: auto;
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  background: linear-gradient(to right, #948979, transparent);
+}
+
+.fade {
+  position: absolute;
+  visibility: visible;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #948979,
+    transparent 5%,
+    transparent 90%,
+    #948979
+  );
+  inset: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .card-y-slider {
+    flex-direction: column;
   }
-  
+
   .box {
-    flex-shrink: 0;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    white-space: normal;
-    border: 1px solid black;
-    border-radius: 10px;
-    overflow: hidden;
-    padding-bottom: 1ch;
-    margin: 10px;
-    background-color: white;
-    box-shadow: 10px 10px 5px -2px rgba(0, 0, 0, 0.75);
-    transition: scale 300ms ease-in-out;
+    width: 94%;
   }
 
-  .box:hover{
-    scale: 1.04;
-  }
-  
-  .slider {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    width: 100vw;
-    background: linear-gradient(to right, #ffcdd2, transparent);
-  }
-  
   .fade {
-    position: absolute;
-    width: 100%;
-    background: linear-gradient(
-      90deg,
-      #ffcdd2,
-      transparent 5%,
-      transparent 90%,
-      #ffcdd2
-    );
-    inset: 0;
-    pointer-events: none;
+    visibility: hidden;
   }
-
-  @media (max-width: 600px){
-    .card-y-slider{
-      flex-direction: column;
-    }
-    .box{
-      width: 94%;
-    }
-    .fade {
-      background: linear-gradient(
-        180deg,
-        #ffcdd2,
-        transparent 5%,
-        transparent 90%,
-        #ffcdd2
-      );
-    }
-  }
+}

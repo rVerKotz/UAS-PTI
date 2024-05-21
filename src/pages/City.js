@@ -1,13 +1,31 @@
 import React, { useState, useEffect } from "react";
+import data from "../data/EastJavaCard";
 import Content from "./Card";
+import axios from "axios"; 
 import InfiniteMovingCards from "./MovingCard";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import "../styles/City.css";
 import "../styles/Styles.scss";
 
-function City({ Food, Wallpaper, Culture }) {
+function City({ Food, Wallpaper, Culture, Index }) {
   const [imgDimensions, setImgDimensions] = useState({ width: 0, height: 0 });
+  const [weather, setWeather] = useState(null);
+
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?q={data[Index].title}&appid=397661306596abd06e01225cb59bafb3&units=metric`
+        );
+        setWeather(response.data);
+      } catch (error) {
+        console.error("Error fetching weather data", error);
+      }
+    };
+
+    fetchWeather();
+  }, []);
 
   function handleResize(index) {
     const imgElement = document.getElementById(`img${index}`);
@@ -18,7 +36,7 @@ function City({ Food, Wallpaper, Culture }) {
 
   useEffect(() => {
     function resizeHandler() {
-      Wallpaper.forEach((image, index) => {
+      Wallpaper.forEach((_, index) => {
         handleResize(index);
       });
     }
@@ -30,7 +48,7 @@ function City({ Food, Wallpaper, Culture }) {
   }, [Wallpaper]);
 
   useEffect(() => {
-    Wallpaper.forEach((image, index) => {
+    Wallpaper.forEach((_, index) => {
       handleResize(index);
     });
   }, [Wallpaper]);
@@ -43,6 +61,7 @@ function City({ Food, Wallpaper, Culture }) {
     width: "30px",
     border: "0px",
     background: "none",
+    zIndex: 5
   };
 
   const headerStyle = {
@@ -85,6 +104,19 @@ function City({ Food, Wallpaper, Culture }) {
           </div>
         ))}
       </Fade>
+      <div className="Content" style={{boxShadow: '10px 10px 5px -2px rgba(0, 0, 0, 0.75)', border: '1px solid black'}}>
+      <h1>{data[Index].title}</h1>
+      <p>{data[Index].description}</p>
+      {weather && (
+          <div className="Weather">
+            <h2>Current Weather in East Java</h2>
+            <p>Temperature: {weather.main.temp}°C</p>
+            <p>Weather: {weather.weather[0].description}</p>
+            <p>Humidity: {weather.main.humidity}%</p>
+            <p>Wind Speed: {weather.wind.speed} m/s</p>
+          </div>
+        )}
+      </div>
       <div className="Cards">
         {Food.map((food, index) => (
           <Content key={index} {...food} />

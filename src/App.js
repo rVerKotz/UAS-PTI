@@ -1,12 +1,13 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
-import City from "./component/City";
-import Navbar from "./component/Navbar";
-import PopUp from "./component/popUp";
+import City from "./pages/City";
+import Navbar from "./pages/Navbar";
+import PopUp from "./pages/popUp";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import image from "./data/EastJavaCard";
+import Login from "./pages/Login"; 
 import "./App.css";
 
 export const CountContext = createContext();
@@ -15,13 +16,14 @@ const CityWrapper = () => {
   const { index } = useParams();
   const card = image[index];
   if (!card) {
-    return <div>City not found</div>;
+    return alert("City not found")
   }
   return (
     <City
       Food={card.food}
       Wallpaper={card.wallpaper}
       Culture={card.culture}
+      Index = {index}
     />
   );
 };
@@ -35,6 +37,16 @@ function App() {
     setPopupContent({ title, image, description });
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      window.location.reload();
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <CountContext.Provider value={{ isOverlay, changeOverlay }}>
       <Router>
@@ -44,10 +56,9 @@ function App() {
             <Route path="*" element={<Home/>} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
-            <Route
-              path="/city/:index"
-              element={<CityWrapper />}
-            />
+            <Route path="/city/:index" element={<CityWrapper />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/lo" element={<Login />} />
           </Routes>
           {isOverlay && <PopUp {...popupContent} />}
         </div>

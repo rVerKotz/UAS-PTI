@@ -17,18 +17,21 @@ export default function NavBar() {
   return (
     <div className="NavBar">
       <div className="LogoSection">
-        <img src="/logo.png" style={{width: "50px", height: "50px", padding:"0 10px"}}/>
-        <h1>East Java</h1>
+        <img alt="logo" src="/logo.png" style={{width: "50px", height: "50px", padding:"0 10px"}}/>
+        <h1 style={{fontFamily: "Cormorant"}}>East Java</h1>
       </div>
-      <div className="NavItems" style={{borderLeft: "1px solid black", lineHeight: "79px"}}>
+      <div className="NavItems" style={{borderLeft: "1px solid black", lineHeight: "79px", position: 'absolute',right: 0}}>
         <Link to="/" className="NavItems">
           Home
         </Link>
         <Link to="/about" className="NavItems">
           About
         </Link>
-        <Link to="/gallery" className="NavItems">
-          Gallery
+        <Link to="/contact" className="NavItems">
+          Contact
+        </Link>
+        <Link to="/login" className="NavItems">
+          Login
         </Link>
       </div>
       <div className="burgerVisible">
@@ -43,8 +46,11 @@ export default function NavBar() {
           <Link to="/about" className="bm-item" onClick={closeMenu}>
             About
           </Link>
-          <Link to="/gallery" className="bm-item" onClick={closeMenu}>
-            Gallery
+          <Link to="/contact" className="bm-item" onClick={closeMenu}>
+            Contact
+          </Link>
+          <Link to="/login" className="bm-item" onClick={closeMenu}>
+            Login
           </Link>
         </Menu>
       </div>

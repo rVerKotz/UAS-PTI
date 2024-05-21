@@ -1,17 +1,15 @@
 import React from "react";
-import "./MemberPreview.css";
-import { Link } from "react-router-dom";
+import "../../styles/MemberPreview.css";
 
-function MemberPreview({ member }) {
+function MemberPreview({ member, index }) {
 
     return (
-        <div className="member-preview" key={member.name} 
+        <div className="member-preview" key={index} 
         style={{
             backgroundImage:`url(${member.img})`, 
             backgroundSize:"cover",
             backgroundPosition:"center"
             }}>
-            {/* <img src={member.img} alt={member.name} /> */}
             <div className="member-card-container" style={{paddingTop:"auto"}}>
                 <h2>{member.name}</h2>
                 <p className="member-title">{member.title}</p>

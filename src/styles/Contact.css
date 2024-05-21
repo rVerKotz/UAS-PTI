@@ -1,0 +1,35 @@
+.vintage-form {
+  max-width: 400px;
+  margin: 100px auto 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vintage-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .vintage-form input[type="text"],
+  .vintage-form input[type="email"],
+  .vintage-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .vintage-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .vintage-form button:hover {
+    background-color: #555;
+  }  

@@ -32,8 +32,7 @@ a:hover {
 }
 
 .burgerVisible {
-  /* visibility: hidden; */
-  display: none;
+  visibility: hidden;
 }
 
 /* Responsive design: Hide .NavItems and show burger menu on small screens */
@@ -45,7 +44,6 @@ a:hover {
 
   .burgerVisible {
     visibility: visible;
-    display: block;
   }
 }
 

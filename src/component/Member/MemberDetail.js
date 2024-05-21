@@ -1,11 +1,11 @@
 import React from "react";
-import "./MemberPreview.css";
+import "../../styles/MemberPreview.css";
 import { Link } from "react-router-dom";
 
-function MemberDetail({ member }) {
+function MemberDetail({ member, index}) {
 
   return (
-    <div className="member-card" key={member.name}>
+    <div className="member-card" key={index}>
     <div className="member-card-container">
         <h2>{member.name}</h2>
         <p className="member-title">{member.title}</p>

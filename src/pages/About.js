@@ -13,20 +13,8 @@ const About = () => {
                 <h2 className="section-header">Our Team</h2>
                 <p>Meet the talented individuals behind our success.</p>
                 <div className="team-container">
-                    {TeamData.map((member) => (
-                        <MemberWrapper member={member}/>
-                        // <div className="about-card" key={member.name}>
-                        //     <img src={member.img} alt={member.name} />
-                        //     <div className="about-card-container">
-                        //         <h2>{member.name}</h2>
-                        //         <p className="abou-title">{member.title}</p>
-                        //         <p>{member.description}</p>
-                        //         <p>{member.email}</p>
-                        //         <Link to="/contact">
-                        //             <button className="about-button">Contact</button>
-                        //         </Link>
-                        //     </div>
-                        // </div>
+                    {TeamData.map((member, index) => (
+                        <MemberWrapper member={member} index={index}/>
                     ))}
                 </div>
             </section>
