@@ -16,7 +16,7 @@ function City({ Food, Wallpaper, Culture, Index }) {
     const fetchWeather = async () => {
       try {
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q={data[Index].title}&appid=397661306596abd06e01225cb59bafb3&units=metric`
+          `https://api.openweathermap.org/data/2.5/weather?q=${data[Index].title}&appid=397661306596abd06e01225cb59bafb3&units=metric`
         );
         setWeather(response.data);
       } catch (error) {

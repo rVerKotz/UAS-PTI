@@ -37,16 +37,6 @@ function App() {
     setPopupContent({ title, image, description });
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      window.location.reload();
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
     <CountContext.Provider value={{ isOverlay, changeOverlay }}>
       <Router>

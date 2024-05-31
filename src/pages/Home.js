@@ -21,7 +21,11 @@ function Home() {
   useEffect(() => {
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener("load", handleResize);
+    return () =>  {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("load", handleResize);
+    }
   }, []);
 
   useEffect(() => {
@@ -41,22 +45,22 @@ function Home() {
 
   const descriptionImageStyle = {
     position: "absolute",
-    top: `calc(${Math.min(imgDimensions.height, 550)}px - 100px)`,
+    top: `calc(${Math.min(imgDimensions.height, 550)}px - 80px)`,
     right: "20px",
     color: "white",
     fontSize: "clamp(1rem, 2.5vw, 4rem)",
-    transition: "top 1s ease-in-out",
+    transition: "top 1s ease-in-out"
   };
 
   const headerImageStyle = {
     position: "absolute",
-    top: `calc(${Math.min(imgDimensions.height, 600)}px - 80px)`,
+    top: `calc(${Math.min(imgDimensions.height, 600)}px - 60px)`,
     right: "20px",
     color: "white",
     fontSize: "clamp(2rem, 5vw, 4rem)",
-    transition: "top 1s ease-in-out",
+    transition: "top 1s ease-in-out"
   };
-
+  console.table(imgDimensions);
   return (
     <>
       <div className="Header">

@@ -2,7 +2,7 @@ const TeamData = [
     {
         name: 'Savero Madajaya',
         title: 'Leader',
-        description: 'Some text that describes me lorem ipsum ipsum lorem.',
+        description: 'Average joe that enjoys computer. Currently teaming up with great comrade',
         email: 'savero2605@gmail.com',
         img: '/image/Member/savero.jpg',
     },
