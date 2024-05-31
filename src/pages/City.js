@@ -109,7 +109,7 @@ function City({ Food, Wallpaper, Culture, Index }) {
       <p>{data[Index].description}</p>
       {weather && (
           <div className="Weather">
-            <h2>Current Weather in East Java</h2>
+            <h2>Current Weather in {data[Index].title}</h2>
             <p>Temperature: {weather.main.temp}°C</p>
             <p>Weather: {weather.weather[0].description}</p>
             <p>Humidity: {weather.main.humidity}%</p>
