@@ -25,7 +25,7 @@ function City({ Food, Wallpaper, Culture, Index }) {
     };
 
     fetchWeather();
-  }, []);
+  }, [Index]);
 
   function handleResize(index) {
     const imgElement = document.getElementById(`img${index}`);

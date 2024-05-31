@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
 import City from "./pages/City";
 import Navbar from "./pages/Navbar";
