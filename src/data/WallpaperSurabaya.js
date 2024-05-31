@@ -9,7 +9,7 @@ const image = [
         id: 2,
         img: "/image/Surabaya/Tugu-Pahlawan.jpg",
         title: "Tugu Pahlawan",
-        body: "Standing at 41.15 meters, symbolizes the historic Battle of 10 November 1945, where Surabaya's residents bravely fought against Allied and Dutch forces seeking to re-colonize Indonesia. With its 10 canalure curves and 11 segments, it stands as a solemn reminder of the sacrifices made for independence, drawing attention every November 10th as the nation commemorates its heroes."
+        body: "Standing at 41.15 meters, the monument honors the Battle of 10 November 1945 in Surabaya, symbolizing the fight against re-colonization. Its design, with 10 curves and 11 segments, commemorates the sacrifices for independence, especially on November 10th, Indonesia's Heroes' Day."
     }
 ];
 export default image;
